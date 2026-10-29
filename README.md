@@ -31,7 +31,19 @@ devtools::install("hiraeth")
 | `portmeirion` | Portmeirion: copper beech, slate dome, turquoise cupola, terracotta, orange tower, pastel villas |
 
 Every palette was sampled from a photograph of the place.
+## The places
 
+<p align="center">
+  <img src="man/figures/tenby.png" width="45%">
+  <img src="man/figures/eryri.png" width="45%">
+</p>
+<p align="center">
+  <img src="man/figures/portmeirion.png" width="45%">
+  <img src="man/figures/barafundle.png" width="45%">
+</p>
+<p align="center">
+  <img src="man/figures/rhossili.png" width="45%">
+</p>
 ## Use
 
 ```r
@@ -51,11 +63,3 @@ ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
   scale_fill_hiraeth_c("rhossili")
 ```
 
-## Make a palette from your own photo
-
-```r
-pal <- hiraeth_extract("photos/llyn_padarn.jpg", n = 7)
-dput(as.character(pal))
-```
-
-Paste the result into `hiraeth_palettes` in `R/palettes.R`, add a line to its documentation, and reinstall.
