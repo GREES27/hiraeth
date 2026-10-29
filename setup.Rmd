@@ -15,6 +15,7 @@ install.packages(c("devtools", "usethis", "gitcreds"))
 devtools::document()   # builds the help pages from the roxygen comments
 devtools::check()      # aim for 0 errors, 0 warnings
 ```
+
 ```{r}
 usethis::use_git_config(user.name = "Gemma Rees", user.email = "gemmarees7@gmail.com")
 usethis::create_github_token()   # opens GitHub: keep the default scopes, generate, copy the token
@@ -27,7 +28,10 @@ usethis::use_github()   # creates GREES27/hiraeth on GitHub and pushes everythin
 ```
 
 ```{r}
-devtools::install_github("GREES27/hiraeth")
+install.packages("pak")
+pak::pak("GREES27/hiraeth")
+library(hiraeth)
+display_all()
 ```
 
 ```{r}
