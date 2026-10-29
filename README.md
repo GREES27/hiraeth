@@ -33,17 +33,20 @@ devtools::install("hiraeth")
 Every palette was sampled from a photograph of the place.
 ## The places
 
+## The places
+
 <p align="center">
-  <img src="man/figures/tenby.png" width="45%">
-  <img src="man/figures/eryri.png" width="45%">
+  <img src="man/figures/tenby_palette.png" width="45%">
+  <img src="man/figures/eryri_palette.png" width="45%">
 </p>
 <p align="center">
-  <img src="man/figures/portmeirion.png" width="45%">
-  <img src="man/figures/barafundle.png" width="45%">
+  <img src="man/figures/portmeirion_palette.png" width="45%">
+  <img src="man/figures/barafundle_palette.png" width="45%">
 </p>
 <p align="center">
-  <img src="man/figures/rhossili.png" width="45%">
+  <img src="man/figures/rhossili_palette.png" width="45%">
 </p>
+
 ## Use
 
 ```r
