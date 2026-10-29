@@ -91,7 +91,18 @@ Every palette was sampled from a photograph of the place.
 </table>
 
 ## Use
+   ![All palettes](man/figures/showcase_all.png)
 
+   <details><summary>See each palette in action</summary>
+
+   ![](man/figures/showcase_tenby.png)
+   ![](man/figures/showcase_eryri.png)
+   ![](man/figures/showcase_portmeirion.png)
+   ![](man/figures/showcase_barafundle.png)
+   ![](man/figures/showcase_rhossili.png)
+
+   </details>
+   
 ```r
 library(hiraeth)
 library(ggplot2)

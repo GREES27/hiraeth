@@ -38,3 +38,35 @@ display_all()
 devtools::document()
 devtools::check()
 ```
+
+```{r}
+usethis::proj_activate("~/Downloads/hiraeth")
+```
+```{R}
+gert::git_add(".")
+gert::git_commit("Lay out palette images with descriptions")
+gert::git_push()
+```
+```{r}
+   usethis::use_build_ignore("data-raw")   # keeps the script out of the installed package
+   devtools::install()                     # picks up the palettes.R change
+   install.packages("patchwork")
+   source("data-raw/showcase.R")
+```
+
+```{r}
+library(hiraeth)
+library(ggplot2)
+
+display_all()                       # see every palette
+hiraeth("barafundle")                    # draw one palette
+hiraeth("barafundle", 50, "continuous")
+
+ggplot(mpg, aes(displ, hwy, colour = class)) +
+  geom_bar(size = 3) +
+  scale_colour_hiraeth_d("barafundle")
+
+ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
+  geom_raster() +
+  scale_fill_hiraeth_c("barafundle")
+```

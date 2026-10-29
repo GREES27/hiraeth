@@ -36,8 +36,9 @@ hiraeth_palettes <- list(
 #'
 #' @param name Name of the palette. See \code{names(hiraeth_palettes)}.
 #' @param n Number of colours wanted. Defaults to all colours in the palette.
-#' @param type \code{"discrete"} returns the palette's own colours (and errors
-#'   if you ask for more than it has); \code{"continuous"} interpolates
+#' @param type \code{"discrete"} returns the palette's own colours, spread
+#'   evenly across the palette when \code{n} is smaller than its length (and
+#'   errors if you ask for more than it has); \code{"continuous"} interpolates
 #'   between them to give any number of colours.
 #' @param direction \code{1} for the stored order, \code{-1} to reverse.
 #'
@@ -64,7 +65,8 @@ hiraeth <- function(name, n, type = c("discrete", "continuous"), direction = 1) 
   }
 
   out <- switch(type,
-    discrete   = pal[seq_len(n)],
+    # Spread picks across the palette so small n still shows its range
+    discrete   = pal[unique(round(seq(1, length(pal), length.out = n)))],
     continuous = grDevices::colorRampPalette(pal)(n)
   )
   structure(out, class = "hiraeth_palette", name = name)
