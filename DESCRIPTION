@@ -1,0 +1,26 @@
+Package: hiraeth
+Type: Package
+Title: Colour Palettes Sampled from Photographs of Wales
+Version: 0.1.0
+Authors@R:
+    person("Gemma", "Rees", email = "gemmarees7@gmail.com",
+           role = c("aut", "cre"))
+Description: Colour palettes sampled from photographs of places in Wales -
+    Eryri, Barafundle, Tenby, Rhossili and Portmeirion - with 'ggplot2'
+    scales and a helper to build new palettes from your own photographs.
+    'Hiraeth' is a Welsh word for a longing for home.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 3.5.0)
+Imports:
+    ggplot2 (>= 3.3.0),
+    grDevices,
+    graphics,
+    stats,
+    tools
+Suggests:
+    jpeg,
+    png
+URL: https://github.com/GREES27/hiraeth
+BugReports: https://github.com/GREES27/hiraeth/issues
+RoxygenNote: 7.3.2

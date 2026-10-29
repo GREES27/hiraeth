@@ -1,0 +1,36 @@
+---
+title: "hiraeth"
+author: "Gemma Rees"
+date: "2026-10-29"
+output: html_document
+---
+
+
+Unzip hiraeth.zip, open the folder in RStudio, then run:
+
+```{r}
+packageVersion("rlang")   # should now say 1.3.0
+library(devtools)
+install.packages(c("devtools", "usethis", "gitcreds"))
+devtools::document()   # builds the help pages from the roxygen comments
+devtools::check()      # aim for 0 errors, 0 warnings
+```
+```{r}
+usethis::use_git_config(user.name = "Gemma Rees", user.email = "gemmarees7@gmail.com")
+usethis::create_github_token()   # opens GitHub: keep the default scopes, generate, copy the token
+gitcreds::gitcreds_set()         # paste the token when prompted
+```
+
+```{r}
+usethis::use_git()      # starts version control and makes the first commit; say yes to restart RStudio
+usethis::use_github()   # creates GREES27/hiraeth on GitHub and pushes everything
+```
+
+```{r}
+devtools::install_github("GREES27/hiraeth")
+```
+
+```{r}
+devtools::document()
+devtools::check()
+```
